@@ -1,0 +1,30 @@
+ package MavenProject.Adactinproject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+
+public class TESTNG_practice 
+{
+WebDriver driver;
+@Test
+public void browser_Launch()
+
+{
+	WebDriverManager.chromedriver().setup();
+	driver = new ChromeDriver();
+	driver.get("https://adactinhotelapp.com/");
+	driver.manage().window().maximize();
+}
+@Test
+public void loginpage()
+{
+	driver.findElement(By.xpath("//input[@id='username']")).sendKeys("meenakannan");
+	driver.findElement(By.xpath("//input[@id='password']")).sendKeys("6UJ6V2");
+	driver.findElement(By.xpath("//input[@id='login']")).click();
+}
+}
