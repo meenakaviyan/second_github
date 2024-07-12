@@ -26,5 +26,6 @@ public void loginpage()
 	driver.findElement(By.xpath("//input[@id='username']")).sendKeys("meenakannan");
 	driver.findElement(By.xpath("//input[@id='password']")).sendKeys("6UJ6V2");
 	driver.findElement(By.xpath("//input[@id='login']")).click();
+        System.out.println("done");
 }
 }
